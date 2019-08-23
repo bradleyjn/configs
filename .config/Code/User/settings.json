@@ -1,0 +1,6 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.restoreWindows": "none"
+}
