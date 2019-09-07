@@ -107,6 +107,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
-fi
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#     tmux attach -t default || tmux new -s default
+# fi
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse
+export LM_LICENSE_FILE="2101@contender0.apl.jhu.edu"
