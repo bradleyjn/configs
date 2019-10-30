@@ -1,9 +1,10 @@
 setopt prompt_subst
 autoload -U colors && colors # Enable colors in prompt
 
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-
-#PROMPT="${ret_status} %{$fg[red]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%}"
+# Echoes a username/host string when connected over SSH (empty otherwise)
+ssh_info() {
+  [[ "$SSH_CONNECTION" != '' ]] && echo '%(!.%{$fg[red]%}.%{$fg[yellow]%})%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%}:' || echo ''
+}
 
 # Echoes information about Git repository status when inside a Git repository
 git_info() {
@@ -63,4 +64,6 @@ git_info() {
 
 # Use ❯ as the non-root prompt character; # for root
 # Change the prompt character color if the last command had a nonzero exit code
-PS1='${ret_status}  %{$fg[red]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%} $(git_info) '
+PS1='
+$(ssh_info)%{$fg[magenta]%}%~%u $(git_info)
+%(?.%{$fg[blue]%}.%{$fg[red]%})%(!.#.❯)%{$reset_color%} '
