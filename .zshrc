@@ -8,7 +8,7 @@ export ZSH="/home/bradley/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="FRIDAY"
+ZSH_THEME="rocket"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +68,7 @@ ZSH_THEME="FRIDAY"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime zsh-syntax-highlighting)
+plugins=(git sublime diskusage zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

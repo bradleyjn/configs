@@ -63,4 +63,7 @@ git_info() {
 
 # Use ❯ as the non-root prompt character; # for root
 # Change the prompt character color if the last command had a nonzero exit code
-PS1='${ret_status} %{$FG[202]%}%m($(sdb1_usage)%)%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%} $(git_info) '
+#PS1='${ret_status} %{$FG[202]%}%m($(DISKUSAGE)%)%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%} $(git_info) '
+PS1='${ret_status} %{$FG[202]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%} $(git_info) '
+
+
