@@ -52,15 +52,15 @@ git_info() {
   fi
 
   local -a GIT_INFO
-  GIT_INFO+=( "\033[38;5;15m±" )
+  GIT_INFO+=( "%{$fg[cyan]%}±" )
   [ -n "$GIT_STATUS" ] && GIT_INFO+=( "$GIT_STATUS" )
   [[ ${#DIVERGENCES[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)DIVERGENCES}" )
   [[ ${#FLAGS[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)FLAGS}" )
-  GIT_INFO+=( "\033[38;5;15m$GIT_LOCATION%{$reset_color%}" )
+  GIT_INFO+=( "%{$fg[cyan]%}$GIT_LOCATION%{$reset_color%}" )
   echo "${(j: :)GIT_INFO}"
 
 }
 
 # Use ❯ as the non-root prompt character; # for root
 # Change the prompt character color if the last command had a nonzero exit code
-PS1='${ret_status}  %{$fg[red]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%} $(git_info) '
+PS1='${ret_status}  %{$fg[red]%}%m %{$fg[cyan]%}%c%{$reset_color%} $(git_info) '

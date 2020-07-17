@@ -39,7 +39,7 @@ ZSH_THEME="FRIDAY"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -68,7 +68,7 @@ ZSH_THEME="FRIDAY"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime zsh-syntax-highlighting)
+plugins=(git sublime zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -129,3 +129,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+alias python='/usr/bin/python2.7'
+alias python3='/usr/bin/python3.5'
