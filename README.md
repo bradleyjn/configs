@@ -8,4 +8,6 @@ alias configs='/usr/bin/git --git-dir=$HOME/configs/ --work-tree=$HOME'
 
 git clone --bare <git-repo-url> $HOME/configs
 
-config checkout
+configs checkout
+
+configs config --local status.showUntrackedFiles no
