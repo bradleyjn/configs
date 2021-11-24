@@ -68,7 +68,7 @@ ZSH_THEME="hulk"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime diskusage zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,3 +132,5 @@ unset __conda_setup
 
 autoload -U compinit
 compinit
+
+ZSH_DISABLE_COMPFIX="false"
